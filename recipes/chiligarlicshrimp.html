@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fish Tacos - Doyle Family Recipes</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../include.js" defer></script>
+  <style>
+    /* Recipe-specific styles */
+    .recipe-header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding: 2rem;
+      background: var(--card-bg);
+      border-radius: 12px;
+      color: var(--smokey-grey-dark);
+    }
+    
+    .recipe-title {
+      font-size: 2.5rem;
+      color: var(--tenn-orange);
+      margin-bottom: 0.5rem;
+    }
+    
+    .recipe-subtitle {
+      font-size: 1.1rem;
+      color: var(--smokey-grey);
+      margin-bottom: 1rem;
+    }
+    
+    .recipe-meta {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    
+    .meta-item {
+      text-align: center;
+    }
+    
+    .meta-label {
+      font-weight: bold;
+      color: var(--tenn-orange);
+      display: block;
+    }
+    
+    .meta-value {
+      color: var(--smokey-grey);
+    }
+    
+    .recipe-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .recipe-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    .ingredients-section, .instructions-section {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      color: var(--smokey-grey-dark);
+      margin-bottom: 1.5rem;
+    }
+    
+    .ingredients-section h2, .instructions-section h2 {
+      color: var(--tenn-orange);
+      border-left: 6px solid var(--tenn-orange);
+      padding-left: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .ingredients-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .ingredients-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--light-grey);
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    
+    .ingredients-list li:before {
+      content: "•";
+      color: var(--tenn-orange);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    
+    .ingredients-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .instructions-list {
+      counter-reset: step-counter;
+      list-style: none;
+      padding: 0;
+    }
+    
+    .instructions-list li {
+      counter-increment: step-counter;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-left: 3rem;
+      padding-top: 0.5rem;
+    }
+    
+    .instructions-list li:before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      background: var(--tenn-orange);
+      color: white;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    
+    .tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    
+    .tag {
+      background: var(--tenn-orange);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    
+    .notes-section {
+      background: var(--off-white);
+      border-left: 4px solid var(--tenn-orange);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 12px 12px 0;
+      color: var(--smokey-grey-dark);
+    }
+    
+    .notes-section h3 {
+      color: var(--tenn-orange);
+      margin-bottom: 0.5rem;
+    }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      color: var(--off-white);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .back-link:hover {
+      color: var(--tenn-orange);
+    }
+    
+    @media (max-width: 768px) {
+      .recipe-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      
+      .recipe-meta {
+        gap: 1rem;
+      }
+      
+      .recipe-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Header include -->
+  <div id="site-header"></div>
+
+  <!-- Main Content -->
+  <main id="main" class="container">
+    <a href="../index.html" class="back-link">← Back to All Recipes</a>
+    
+    <!-- Recipe Header -->
+    <div class="recipe-header">
+      <h1 class="recipe-title">Chili Garlic Shrimp</h1>
+      <p class="recipe-subtitle">Delicious heat.</p>
+      
+      <div class="recipe-meta">
+        <div class="meta-item">
+          <span class="meta-label">Prep Time</span>
+          <span class="meta-value">15 mins</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Cook Time</span>
+          <span class="meta-value">45 mins</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Total Time</span>
+          <span class="meta-value">1 hour</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Serves</span>
+          <span class="meta-value">6-8</span>
+        </div>
+      </div>
+      
+      <div class="tags">
+        <span class="tag">Dinner</span>
+        <span class="tag">One Pan</span>
+        <span class="tag">Asian</span>
+        <span class="tag">Spicy</span>
+      </div>
+    </div>
+
+    <!-- Recipe Content -->
+    <div class="recipe-content">
+      <div>
+        <img src="../img/chiligarlicshrimp.png" alt="Chili Garlic Shrimp" class="recipe-image">
+      </div>
+      
+      <div class="ingredients-section">
+        <h2>Ingredients</h2>
+        <ul class="ingredients-list">
+            <li>1 lb shrimp peeled and deveined</li>
+            <li>1 tbsp avocado oil or your favorite cooking oil</li>
+            <li>1 tsp sesame oil</li>
+            <li>4 garlic cloves minced</li>
+            <li>1 inch ginger grated</li>
+            <li>1 tsp chili flakes</li>
+            <li>Green onions & sesame seeds for garnish</li>
+        </ul>   
+      </div>
+    </div>
+
+    <!-- Instructions -->
+    <div class="instructions-section">
+      <h2>Instructions</h2>
+      <ol class="instructions-list">
+            <li>Make the sauce first by blending all the ingredients together until smooth. Set aside.</li>
+            <li>Heat avocado oil in a large skillet over medium high heat.</li>
+            <li>Pat dry the shrimp, then add to the heated skillet in a single layer. Pan fry for 1 minute per side, then remove from the skillet. Set aside.</li>
+            <li>Add sesame oil to the same skillet, then add garlic, ginger, and chili flakes. Stir for 1 minute until fragrant.</li>
+            <li>Pour in the sauce, then simmer for 3-4 minutes until slightly thickened.</li>
+            <li>Add the shrimp back into the skillet. Toss to coat in the sauce, then cook for 1-2 minutes until heated through. Serve warm.</li>
+        </ol>
+    </div>
+
+    <!-- Chef's Notes -->
+    <div class="notes-section">
+      <h3>Chef's Notes</h3>
+      <p>Don't skimp on the heat and you'll have more leftovers for yourself.</p>
+    </div>
+
+  </main>
+
+  <!-- Footer include -->
+  <div id="site-footer"></div>
+</body>
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> origin

@@ -10,7 +10,7 @@
   --tenn-orange: #ff8200;
   --off-white: #f8f8f8;
   --light-grey: #e0e0e0;
-  --card-bg: #3b3c3d;
+  --card-bg: #ffffff;
 }
 
 /* Reset / Base */
@@ -133,7 +133,7 @@ nav a.active {
 .card p {
   margin: 0 1rem 1rem;
   font-size: 0.95rem;
-  color: var(--light-grey);
+  color: var(--smokey-grey);
 }
 
 /* ================================
@@ -148,8 +148,6 @@ nav a.active {
   margin-bottom: 1rem;
   border-left: 6px solid var(--tenn-orange);
   padding-left: 0.5rem;
-  color: var(--tenn-orange);
-  text-align: center;
 }
 
 h1, h2, h3 {
