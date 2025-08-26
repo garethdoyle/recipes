@@ -10,7 +10,8 @@
   --tenn-orange: #ff8200;
   --off-white: #f8f8f8;
   --light-grey: #e0e0e0;
-  --card-bg: #ffffff;
+/*  --card-bg: #ffffff; */
+  --card-bg:#3b3c3d;
 }
 
 /* Reset / Base */
@@ -106,7 +107,7 @@ nav a.active {
 
 .card {
   background: var(--card-bg);
-  color: var(--smokey-grey-dark);
+  color: var(--light-grey);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -144,6 +145,7 @@ nav a.active {
 }
 
 .section h2 {
+  color: var(--tenn-orange);
   font-size: 1.5rem;
   margin-bottom: 1rem;
   border-left: 6px solid var(--tenn-orange);
