@@ -106,12 +106,14 @@ nav a.active {
 }
 
 .card {
-  background: var(--card-bg);
+  background: #2F2F2F;
   color: var(--light-grey);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.2s, box-shadow 0.2s;
+  max-height: 307px; /* Added */
+  max-width: 260px; /* Added */
 }
 
 .card:hover {
@@ -145,11 +147,12 @@ nav a.active {
 }
 
 .section h2 {
-  color: var(--tenn-orange);
+  color: #FF8200;
   font-size: 1.5rem;
   margin-bottom: 1rem;
   border-left: 6px solid var(--tenn-orange);
   padding-left: 0.5rem;
+  text-align: center;
 }
 
 h1, h2, h3 {

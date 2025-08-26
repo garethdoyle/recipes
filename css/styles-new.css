@@ -1,0 +1,160 @@
+/* === Global Styles === */
+:root {
+  --dark-grey: #2F2F2F;
+  --medium-grey: #4B4B4B;
+  --light-grey: #E5E5E5;
+  --accent-orange: #FF8200; /* Tennessee Orange */
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--dark-grey);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+/* === Layout Container === */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Accessibility: Skip Link === */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent-orange);
+  color: var(--dark-grey);
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* === Header === */
+header {
+  background-color: var(--medium-grey);
+  padding: 1rem 0;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--accent-orange);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: var(--accent-orange);
+}
+
+/* === Footer === */
+footer {
+  background-color: var(--medium-grey);
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--light-grey);
+  margin-top: 2rem;
+}
+
+/* === Homepage Recipe Grid === */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.recipe-card {
+  background-color: var(--dark-grey);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  transition: transform 0.3s;
+}
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe-card h2 {
+  color: var(--accent-orange);
+  font-size: 1.4rem;
+  margin: 1rem;
+}
+
+.recipe-card p {
+  color: var(--light-grey);
+  margin: 0 1rem 1rem;
+}
+
+/* === Individual Recipe Pages === */
+.recipe-page {
+  margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recipe-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.recipe-hero img {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+.recipe-hero h1 {
+  color: var(--accent-orange);
+  margin-top: 1rem;
+  font-size: 2.5rem;
+}
+
+.recipe-hero .subtitle {
+  color: var(--light-grey);
+  font-style: italic;
+}
+
+.recipe-details h2 {
+  color: var(--accent-orange);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.recipe-details ul,
+.recipe-details ol {
+  background-color: var(--medium-grey);
+  padding: 1.5rem;
+  border-radius: 8px;
+  line-height: 1.6;
+}
