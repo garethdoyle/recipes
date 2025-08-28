@@ -15,7 +15,11 @@
       border-left: 4px solid var(--tenn-orange);
   }
 
-  .recipe-header {
+  .card {
+    color: var(--light-grey);
+  }
+
+  .main-recipe-header {
     text-align: center;
     margin-bottom: 1rem;
     padding: 2rem;
@@ -24,6 +28,57 @@
     color: var(--smokey-grey-dark);
   }
     
+  .main-recipe-title {
+    font-size: 2rem;
+    color: var(--tenn-orange);
+    margin-bottom: 0.5rem;
+  }
+    
+  .main-recipe-subtitle {
+    font-size: 1.1rem;
+    color: var(--light-grey);
+    margin-bottom: 1rem;
+  }
+
+  .main-recipe-image {
+    width: 400px;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 4px var(--smokey-grey-dark);
+  }
+
+  .main-notes-section {
+    background: var(--smokey-grey-dark);
+    text-align: center;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 12px;
+    color: var(--off-white);
+  }
+
+  .main-notes-section h3 {
+    color: var(--tenn-orange);
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .recipe-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    background: var(--smokey-grey-dark);
+    border-radius: 12px;
+    color: var(--smokey-grey-dark);
+  }
+
   .recipe-title {
     font-size: 2.5rem;
     color: var(--tenn-orange);
@@ -64,7 +119,7 @@
     gap: 1rem;
     margin-bottom: 0;
   }
-    
+
   .recipe-image {
     width: auto;
     max-height: 500px;
@@ -89,7 +144,7 @@
     margin-bottom: 1.5rem;
   }
     
-  .ingredients-section h2, .instructions-section h2,  .notes-section h3 {
+  .ingredients-section h2, .instructions-section h2,  .notes-section h3, .recipe-title h3 {
     color: var(--tenn-orange);
     border-left: 6px solid var(--tenn-orange);
     padding-left: 0.5rem;
